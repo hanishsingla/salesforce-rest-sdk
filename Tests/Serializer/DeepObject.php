@@ -14,14 +14,14 @@ class DeepObject
 {
     /**
      * @var string
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $name;
 
     /**
      * @var string
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $description;
 
     /**

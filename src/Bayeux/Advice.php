@@ -14,32 +14,32 @@ use JMS\Serializer\Annotation as JMS;
  * Class Advice
  *
  * @package AE\SalesforceRestSdk\Bayeux
- * @JMS\ExclusionPolicy("NONE")
  */
+#[JMS\ExclusionPolicy('NONE')]
 class Advice
 {
     /**
      * @var string
-     * @JMS\Type("string")
      */
+    #[JMS\Type('string')]
     private $reconnect;
 
     /**
      * @var int
-     * @JMS\Type("int")
      */
+    #[JMS\Type('int')]
     private $timeout;
 
     /**
      * @var int
-     * @JMS\Type("int")
      */
+    #[JMS\Type('int')]
     private $interval;
 
     /**
      * @var array
-     * @JMS\Type("array")
      */
+    #[JMS\Type('array')]
     private $callbackPolling;
 
     /**

@@ -15,32 +15,32 @@ class CollectionResponse extends CreateResponse
 {
     /**
      * @var array|null
-     * @Serializer\Type("array")
      */
+    #[Serializer\Type('array')]
     private $warnings;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $message;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $errorCode;
 
     /**
      * @var array
-     * @Serializer\Type("array<string>")
      */
+    #[Serializer\Type('array<string>')]
     private $fields = [];
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $referenceId;
 
     /**

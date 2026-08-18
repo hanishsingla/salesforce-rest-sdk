@@ -14,20 +14,20 @@ use JMS\Serializer\Annotation as Serializer;
  * Class SupportedScope
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Metadata
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class SupportedScope
 {
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $label;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $name;
 
     /**

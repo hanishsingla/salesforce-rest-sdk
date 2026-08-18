@@ -18,14 +18,14 @@ class UpdateSubRequest extends PatchSubRequest implements SObjectSubRequestInter
 {
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectType;
 
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectId;
 
     /**
@@ -71,9 +71,7 @@ class UpdateSubRequest extends PatchSubRequest implements SObjectSubRequestInter
         return $this;
     }
 
-    /**
-     * @Serializer\PreSerialize()
-     */
+    #[Serializer\PreSerialize]
     public function preSerialize()
     {
         if (null === $this->sObjectType || null === $this->sObjectId || null === $this->getBody()) {
@@ -84,9 +82,7 @@ class UpdateSubRequest extends PatchSubRequest implements SObjectSubRequestInter
         $this->body->Id = null;
     }
 
-    /**
-     * @Serializer\PostDeserialize()
-     */
+    #[Serializer\PostDeserialize]
     public function postSerialize()
     {
         $this->body->Id = $this->sObjectId;

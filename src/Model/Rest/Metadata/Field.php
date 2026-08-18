@@ -14,350 +14,350 @@ use JMS\Serializer\Annotation as Serializer;
  * Class Field
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Metadata
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class Field
 {
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $aggregatable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $aiPredictionField;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $autoNumber;
 
     /**
      * @var int
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $byteLength = 0;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $calculated;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $calculatedFormula;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $cascadeDelete;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $caseSensitive;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $compoundFieldName;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $controllerName;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $createable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $custom;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $defaultValue;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $defaultValueFormula;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $defaultedOnCreate;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $dependentPicklist;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $deprecatedAndHidden;
 
     /**
      * @var int
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $digits = 0;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $displayLocationInDecimal;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $encrypted;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $externalId;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $extraTypeInfo;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $filterable;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $filterableLookupInfo;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $forumlaTreatNullNumberAsZero;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $groupable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $highScaleNumber;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $htmlFormatted;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $idLookup;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $inlineHelpText;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $label;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $length;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $mask;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $maskType;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $name;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $nameField;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $namePointing;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $nillable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $permissionable;
 
     /**
      * @var array|PickListValue[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Metadata\PickListValue>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Metadata\PickListValue>')]
     private $picklistValues = [];
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $polymorphicForeignKey;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $precision;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $queryByDistance;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $referenceTargetField;
 
     /**
      * @var array
-     * @Serializer\Type("array<string>")
      */
+    #[Serializer\Type('array<string>')]
     private $referenceTo = [];
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $relationshipName;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $relationshipOrder;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $restrictedDelete;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $restrictedPicklist;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $scale;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $searchPrefilterable;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $soapType;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $sortable;
 
     /**
      * @var string|null
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $type;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $unique;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $updateable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $writeRequiresMasterRead;
 
     /**

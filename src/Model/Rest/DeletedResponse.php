@@ -14,26 +14,26 @@ use JMS\Serializer\Annotation as Serializer;
  * Class DeletedResponse
  *
  * @package AE\SalesforceRestSdk\Model\Rest
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class DeletedResponse
 {
     /**
      * @var array|DeletedRecord[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\DeletedRecord>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\DeletedRecord>')]
     private $deletedRecords = [];
 
     /**
      * @var \DateTimeImmutable|null
-     * @Serializer\Type("DateTimeImmutable<'Y-m-d\TH:i:s.uO'>")
      */
+    #[Serializer\Type("DateTimeImmutable<'Y-m-d\\TH:i:s.uO'>")]
     private $earliestDateAvailable;
 
     /**
      * @var \DateTimeImmutable|null
-     * @Serializer\Type("DateTimeImmutable<'Y-m-d\TH:i:s.uO'>")
      */
+    #[Serializer\Type("DateTimeImmutable<'Y-m-d\\TH:i:s.uO'>")]
     private $latestDateCovered;
 
     /**

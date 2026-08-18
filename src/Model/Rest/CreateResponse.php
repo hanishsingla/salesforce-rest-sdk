@@ -14,26 +14,26 @@ use JMS\Serializer\Annotation as Serializer;
  * Class CreateResponse
  *
  * @package AE\SalesforceRestSdk\Model\Rest
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class CreateResponse
 {
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     protected $success;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     protected $id;
 
     /**
      * @var array|RequestError[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\RequestError>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\RequestError>')]
     protected $errors;
 
     /**

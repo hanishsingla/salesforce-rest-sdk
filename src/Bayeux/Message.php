@@ -16,111 +16,111 @@ use Ramsey\Uuid\Uuid;
  * Class Message
  *
  * @package AE\SalesforceRestSdk\Bayeux
- * @JMS\ExclusionPolicy("NONE")
  */
+#[JMS\ExclusionPolicy('NONE')]
 class Message
 {
     /**
      * @var string|null
-     * @JMS\Type("string")
-     * @JMS\Groups({"handshake", "subscribe", "unsubscribe", "connect", "disconnect"})
      */
+    #[JMS\Type('string')]
+    #[JMS\Groups(['handshake', 'subscribe', 'unsubscribe', 'connect', 'disconnect'])]
     private $channel;
 
     /**
      * @var string
-     * @JMS\Type("string")
-     * @JMS\Groups({"connect", "disconnect", "subscribe", "unsubscribe", "disconnect"})
      */
+    #[JMS\Type('string')]
+    #[JMS\Groups(['connect', 'disconnect', 'subscribe', 'unsubscribe', 'disconnect'])]
     private $clientId;
 
     /**
      * @var StreamingData|null
-     * @JMS\Type("AE\SalesforceRestSdk\Bayeux\Salesforce\StreamingData")
      */
+    #[JMS\Type('AE\SalesforceRestSdk\Bayeux\Salesforce\StreamingData')]
     private $data;
 
     /**
      * @var string|null
-     * @JMS\Type("string")
-     * @JMS\Groups({"handshake"})
      */
+    #[JMS\Type('string')]
+    #[JMS\Groups(['handshake'])]
     private $version;
 
     /**
      * @var string|null
-     * @JMS\Type("string")
-     * @JMS\Groups({"handshake"})
      */
+    #[JMS\Type('string')]
+    #[JMS\Groups(['handshake'])]
     private $minimumVersion;
 
     /**
      * @var array|null
-     * @JMS\Type("array<string>")
-     * @JMS\Groups({"handshake"})
      */
+    #[JMS\Type('array<string>')]
+    #[JMS\Groups(['handshake'])]
     private $supportedConnectionTypes;
 
     /**
      * @var Advice|null
-     * @JMS\Type("AE\SalesforceRestSdk\Bayeux\Advice")
-     * @JMS\Exclude(if="context.getDirection() === 1")
      */
+    #[JMS\Type('AE\SalesforceRestSdk\Bayeux\Advice')]
+    #[JMS\Exclude(if: 'context.getDirection() === 1')]
     private $advice;
 
     /**
      * @var string
-     * @JMS\Type("string")
-     * @JMS\Groups({"connect"})
      */
+    #[JMS\Type('string')]
+    #[JMS\Groups(['connect'])]
     private $connectionType;
 
     /**
      * @var string
-     * @JMS\Type("string")
-     * @JMS\Groups({"handshake", "connect", "subscribe", "unsubscribe", "disconnect"})
      */
+    #[JMS\Type('string')]
+    #[JMS\Groups(['handshake', 'connect', 'subscribe', 'unsubscribe', 'disconnect'])]
     private $id;
 
     /**
      * @var \DateTimeImmutable|null
-     * @JMS\Type("DateTimeImmutable<'Y-m-d\TH:i:s', 'GMT'>")
      */
+    #[JMS\Type("DateTimeImmutable<'Y-m-d\\TH:i:s', 'GMT'>")]
     private $timestamp;
 
     /**
      * @var bool|null
-     * @JMS\Type("bool")
-     * @JMS\Exclude(if="context.getDirection() === 1")
      */
+    #[JMS\Type('bool')]
+    #[JMS\Exclude(if: 'context.getDirection() === 1')]
     private $successful = true;
 
     /**
      * @var bool|null
-     * @JMS\Type("bool")
-     * @JMS\Exclude(if="context.getDirection() === 1")
      */
+    #[JMS\Type('bool')]
+    #[JMS\Exclude(if: 'context.getDirection() === 1')]
     private $authSuccessful;
 
     /**
      * @var string|null
-     * @JMS\Type("string")
-     * @JMS\Groups({"subscribe", "unsubscribe"})
      */
+    #[JMS\Type('string')]
+    #[JMS\Groups(['subscribe', 'unsubscribe'])]
     private $subscription;
 
     /**
      * @var string|null
-     * @JMS\Type("string")
-     * @JMS\Exclude(if="context.getDirection() === 1")
      */
+    #[JMS\Type('string')]
+    #[JMS\Exclude(if: 'context.getDirection() === 1')]
     private $error;
 
     /**
      * @var array|null
-     * @JMS\Type("array")
-     * @JMS\Groups({"handshake", "connect", "disconnect", "subscribe", "unsubscribe"})
      */
+    #[JMS\Type('array')]
+    #[JMS\Groups(['handshake', 'connect', 'disconnect', 'subscribe', 'unsubscribe'])]
     private $ext;
 
     /**
@@ -424,9 +424,9 @@ class Message
     }
 
     /**
-     * @JMS\PreSerialize()
      * @throws \Exception
      */
+    #[JMS\PreSerialize]
     public function preSerialize()
     {
         if (null === $this->timestamp) {

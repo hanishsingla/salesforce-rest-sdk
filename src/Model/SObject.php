@@ -14,14 +14,14 @@ use JMS\Serializer\Annotation as Serializer;
  * Class SObject
  *
  * @package AE\SalesforceRestSdk\Model
- * @Serializer\ExclusionPolicy("NONE")
  */
+#[Serializer\ExclusionPolicy('NONE')]
 class SObject
 {
     /**
      * @var array
-     * @Serializer\Type("array")
      */
+    #[Serializer\Type('array')]
     protected $fields = [];
 
     public function __construct(array $fields = [])

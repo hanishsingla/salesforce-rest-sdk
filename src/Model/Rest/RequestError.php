@@ -14,26 +14,26 @@ use JMS\Serializer\Annotation as Serializer;
  * Class RequestError
  *
  * @package AE\SalesforceRestSdk\Model\Rest
- * @Serializer\ExclusionPolicy("NONE")
  */
+#[Serializer\ExclusionPolicy('NONE')]
 class RequestError
 {
     /**
      * @var array|null
-     * @Serializer\Type("array")
      */
+    #[Serializer\Type('array')]
     private $fields;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $message;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $statusCode;
 
     /**

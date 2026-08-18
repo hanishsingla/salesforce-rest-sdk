@@ -18,14 +18,14 @@ class DeleteSubRequest extends BaseSubRequest implements SObjectSubRequestInterf
 {
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectType;
 
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectId;
 
     public function __construct(string $sObjectType, string $sObjectId, string $version = "44.0")
@@ -46,9 +46,7 @@ class DeleteSubRequest extends BaseSubRequest implements SObjectSubRequestInterf
         return $this;
     }
 
-    /**
-     * @Serializer\PreSerialize()
-     */
+    #[Serializer\PreSerialize]
     public function preSerialize()
     {
         if (null === $this->sObjectType || null === $this->sObjectId) {

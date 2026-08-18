@@ -8,19 +8,18 @@
 
 namespace AE\SalesforceRestSdk\Model\Rest\Composite\Batch\SObject;
 
-use AE\SalesforceRestSdk\Model\Rest\Composite\SObject\BasicInfoRequestInterface;
 use AE\SalesforceRestSdk\Model\Rest\Composite\Batch\GetSubRequest;
 use AE\SalesforceRestSdk\Model\Rest\Composite\Batch\SubRequest;
+use AE\SalesforceRestSdk\Model\Rest\Composite\SObject\BasicInfoRequestInterface;
 use AE\SalesforceRestSdk\Model\Rest\Metadata\BasicInfo;
-use AE\SalesforceRestSdk\Rest\SObject\Client;
 use JMS\Serializer\Annotation as Serializer;
 
 class BasicInfoSubRequest extends GetSubRequest implements BasicInfoRequestInterface
 {
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectType;
 
     public function __construct(string $sObjectType, string $version = "44.0")

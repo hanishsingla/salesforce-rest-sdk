@@ -19,20 +19,20 @@ class GetDeletedSubRequest extends GetSubRequest implements GetDeletedSubRequest
 {
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectType;
 
     /**
      * @var \DateTime
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $start;
 
     /**
      * @var \DateTime
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $end;
 
     public function __construct(string $sObjectType, \DateTime $start, ?\DateTime $end, string $version = "44.0")
@@ -102,9 +102,7 @@ class GetDeletedSubRequest extends GetSubRequest implements GetDeletedSubRequest
         return $this;
     }
 
-    /**
-     * @Serializer\PreSerialize()
-     */
+    #[Serializer\PreSerialize]
     public function preSerialize()
     {
         $this->start->setTimezone(new \DateTimeZone("UTC"));

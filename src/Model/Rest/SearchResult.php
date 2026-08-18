@@ -15,14 +15,14 @@ class SearchResult
 {
     /**
      * @var array|CompositeSObject[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Composite\CompositeSObject>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Composite\CompositeSObject>')]
     private $searchRecords = [];
 
     /**
      * @var array
-     * @Serializer\Type("array")
      */
+    #[Serializer\Type('array')]
     private $metadata = [];
 
     /**

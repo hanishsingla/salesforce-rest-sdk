@@ -15,32 +15,32 @@ use JMS\Serializer\Annotation as Serializer;
  * Class SubRequestResult
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Composite
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class SubRequestResult
 {
     /**
      * @var mixed
-     * @Serializer\Type("array")
      */
+    #[Serializer\Type('array')]
     private $body;
 
     /**
      * @var ArrayCollection
-     * @Serializer\Type("ArrayCollection<string, string>")
      */
+    #[Serializer\Type('ArrayCollection<string, string>')]
     private $httpHeaders;
 
     /**
      * @var int
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $httpStatusCode;
 
     /**
      * @var string
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $referenceId;
 
     public function __construct()

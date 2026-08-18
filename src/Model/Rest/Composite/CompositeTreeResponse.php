@@ -14,20 +14,20 @@ use JMS\Serializer\Annotation as Serializer;
  * Class CompositeTreeResponse
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Composite
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class CompositeTreeResponse
 {
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $hasErrors = false;
 
     /**
      * @var array|CollectionResponse[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Composite\CollectionResponse>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Composite\CollectionResponse>')]
     private $results = [];
 
     /**

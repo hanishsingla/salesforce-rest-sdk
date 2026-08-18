@@ -14,26 +14,26 @@ use JMS\Serializer\Annotation as JMS;
  * Class Event
  *
  * @package AE\SalesforceRestSdk\Bayeux\Salesforce
- * @JMS\ExclusionPolicy("NONE")
  */
+#[JMS\ExclusionPolicy('NONE')]
 class Event
 {
     /**
      * @var \DateTimeImmutable
-     * @JMS\Type("DateTimeImmutable<'Y-m-d\TH:i:s.u\Z', 'GMT'>")
      */
+    #[JMS\Type("DateTimeImmutable<'Y-m-d\\TH:i:s.u\\Z', 'GMT'>")]
     private $createdDate;
 
     /**
      * @var int
-     * @JMS\Type("int")
      */
+    #[JMS\Type('int')]
     private $replayId;
 
     /**
      * @var string|null
-     * @JMS\Type("string")
      */
+    #[JMS\Type('string')]
     private $type;
 
     /**

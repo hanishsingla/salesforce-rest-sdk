@@ -14,26 +14,26 @@ use JMS\Serializer\Annotation as Serializer;
  * Class GlobalDescribe
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Metadata
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class GlobalDescribe
 {
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $encoding;
 
     /**
      * @var int
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $maxBatchSize;
 
     /**
      * @var array|DescribeSObject[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Metadata\DescribeSObject>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Metadata\DescribeSObject>')]
     private $sobjects = [];
 
     /**

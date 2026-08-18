@@ -14,20 +14,20 @@ use JMS\Serializer\Annotation as Serializer;
  * Class Limit
  *
  * @package AE\SalesforceRestSdk\Model\Rest
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class Limit
 {
     /**
      * @var int
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $Max = 0;
 
     /**
      * @var int
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $Remaining = 0;
 
     /**

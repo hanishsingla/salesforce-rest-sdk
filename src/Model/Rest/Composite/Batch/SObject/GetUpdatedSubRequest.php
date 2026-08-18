@@ -19,20 +19,20 @@ class GetUpdatedSubRequest extends GetSubRequest implements GetUpdatedSubRequest
 {
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectType;
 
     /**
      * @var \DateTime
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $start;
 
     /**
      * @var \DateTime
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $end;
 
     public function __construct(
@@ -103,9 +103,7 @@ class GetUpdatedSubRequest extends GetSubRequest implements GetUpdatedSubRequest
         return UpdatedResponse::class;
     }
 
-    /**
-     * @Serializer\PreSerialize()
-     */
+    #[Serializer\PreSerialize]
     public function preSerialize()
     {
         $this->start->setTimezone(new \DateTimeZone("UTC"));

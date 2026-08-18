@@ -20,8 +20,8 @@ class CountResult implements \ArrayAccess, \Iterator, \Countable
 {
     /**
      * @var array|Count[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Count>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Count>')]
     private $sObjects = [];
 
     /**

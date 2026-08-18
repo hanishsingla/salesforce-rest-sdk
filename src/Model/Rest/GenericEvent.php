@@ -14,14 +14,14 @@ class GenericEvent
 {
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $payload;
 
     /**
      * @var array
-     * @Serializer\Type("array")
      */
+    #[Serializer\Type('array')]
     private $userIds = [];
 
     public function __construct(?string $payload = null, array $userIds = [])

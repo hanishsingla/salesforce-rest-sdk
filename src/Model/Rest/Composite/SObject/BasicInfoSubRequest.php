@@ -17,8 +17,8 @@ class BasicInfoSubRequest extends GetSubRequest implements BasicInfoRequestInter
 {
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectType;
 
     public function __construct(string $sObjectType, string $version = "44.0", ?string $referenceId = null)

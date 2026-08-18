@@ -14,8 +14,8 @@ class CompositeResponse
 {
     /**
      * @var array|SubRequestResult[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Composite\SubRequestResult>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Composite\SubRequestResult>')]
     private $compositeResponse = [];
 
     /**

@@ -14,14 +14,14 @@ class StreamingChannelResponse
 {
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $fanoutCount;
 
     /**
      * @var array|null
-     * @Serializer\Type("array")
      */
+    #[Serializer\Type('array')]
     private $userOnlineStatus = [];
 
     /**

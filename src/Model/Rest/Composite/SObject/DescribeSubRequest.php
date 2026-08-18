@@ -18,8 +18,8 @@ class DescribeSubRequest extends GetSubRequest implements DescribeSubRequestInte
 {
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectType;
 
     public function __construct(

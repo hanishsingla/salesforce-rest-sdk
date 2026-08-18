@@ -14,55 +14,55 @@ use JMS\Serializer\Annotation as Serializer;
  * Class RecordTypeInfo
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Metadata
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class RecordTypeInfo
 {
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $active;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $available;
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $defaultRecordTypeMapping;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $developerName;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $master = true;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $name;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $recordTypeId;
 
     /**
      * @var array
-     * @Serializer\Type("array<string, string>")
      */
+    #[Serializer\Type('array<string, string>')]
     private $urls = [];
 
     /**

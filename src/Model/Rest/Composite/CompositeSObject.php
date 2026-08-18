@@ -15,14 +15,14 @@ use JMS\Serializer\Annotation as Serializer;
  * Class CompositeSObject
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Composite
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class CompositeSObject extends SObject
 {
     /**
      * @var array
-     * @Serializer\Type("array")
      */
+    #[Serializer\Type('array')]
     private $attributes = ['type' => 'sobject'];
 
     public function __construct(string $type = 'sobject', array $fields = [])

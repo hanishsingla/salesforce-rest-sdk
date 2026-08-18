@@ -14,38 +14,38 @@ use JMS\Serializer\Annotation as Serializer;
  * Class PickListValue
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Metadata
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class PickListValue
 {
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $active;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $defaultValue;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $label;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $validFor;
 
     /**
      * @var string
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $value;
 
     /**

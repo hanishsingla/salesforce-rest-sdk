@@ -23,20 +23,20 @@ class GetSubRequest extends BaseSubRequest implements ReferenceableInterface, SO
 {
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectType;
 
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectId;
 
     /**
      * @var array
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $fields = ["Id"];
 
     public function __construct(
@@ -76,9 +76,7 @@ class GetSubRequest extends BaseSubRequest implements ReferenceableInterface, SO
         return SObject::class;
     }
 
-    /**
-     * @Serializer\PreSerialize()
-     */
+    #[Serializer\PreSerialize]
     public function preSerialize()
     {
         if (null === $this->sObjectType || null === $this->sObjectId) {

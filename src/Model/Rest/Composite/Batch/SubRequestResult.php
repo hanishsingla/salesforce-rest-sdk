@@ -14,20 +14,20 @@ use JMS\Serializer\Annotation as Serializer;
  * Class SubRequestResult
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Composite\Batch
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class SubRequestResult
 {
     /**
      * @var int
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $statusCode = 0;
 
     /**
      * @var mixed
-     * @Serializer\Type("array")
      */
+    #[Serializer\Type('array')]
     private $result;
 
     /**

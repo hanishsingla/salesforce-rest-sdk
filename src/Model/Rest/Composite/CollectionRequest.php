@@ -17,20 +17,20 @@ use JMS\Serializer\Annotation as Serializer;
  * Class CollectionRequest
  *
  * @package AE\SalesforceRestSdk\Composite\Model
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class CollectionRequest implements CollectionRequestInterface
 {
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $allOrNone = false;
 
     /**
      * @var Collection
-     * @Serializer\Type("ArrayCollection<AE\SalesforceRestSdk\Model\Rest\Composite\CompositeSObject>")
      */
+    #[Serializer\Type('ArrayCollection<AE\SalesforceRestSdk\Model\Rest\Composite\CompositeSObject>')]
     private $records;
 
     public function __construct(array $records = [], bool $allOrNone = false)

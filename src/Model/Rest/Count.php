@@ -19,14 +19,14 @@ class Count
 {
     /**
      * @var int
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $count = 0;
 
     /**
      * @var string
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $name;
 
     /**

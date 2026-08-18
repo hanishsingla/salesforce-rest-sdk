@@ -14,14 +14,14 @@ use JMS\Serializer\Annotation as Serializer;
  * Class BatchRequest
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Composite\Batch
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class BatchRequest
 {
     /**
      * @var array|SubRequest[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Composite\Batch\SubRequest>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Composite\Batch\SubRequest>')]
     private $batchRequests;
 
     /**

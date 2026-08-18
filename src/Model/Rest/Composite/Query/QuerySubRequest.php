@@ -18,8 +18,8 @@ class QuerySubRequest extends GetSubRequest implements QuerySubRequestInterface
 {
     /**
      * @var string|QueryResult
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     protected $query;
 
     /**
@@ -70,9 +70,7 @@ class QuerySubRequest extends GetSubRequest implements QuerySubRequestInterface
         return QueryResult::class;
     }
 
-    /**
-     * @Serializer\PreSerialize()
-     */
+    #[Serializer\PreSerialize]
     public function preSerialize()
     {
         if ($this->query instanceof QueryResult && null !== $this->query->getNextRecordsUrl()) {

@@ -14,20 +14,20 @@ use JMS\Serializer\Annotation as Serializer;
  * Class CompositeRequest
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Composite
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class CompositeRequest
 {
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $allOrNone = false;
 
     /**
      * @var SubRequest[]|array
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Composite\SubRequest>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Composite\SubRequest>')]
     private $compositeRequest = [];
 
     /**

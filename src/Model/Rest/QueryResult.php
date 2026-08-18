@@ -15,26 +15,26 @@ class QueryResult
 {
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $done = false;
 
     /**
      * @var int
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $totalSize = 0;
 
     /**
      * @var array|CompositeSObject[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Composite\CompositeSObject>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Composite\CompositeSObject>')]
     private $records = [];
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $nextRecordsUrl;
 
     /**

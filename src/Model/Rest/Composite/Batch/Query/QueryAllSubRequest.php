@@ -13,9 +13,7 @@ use JMS\Serializer\Annotation as Serializer;
 
 class QueryAllSubRequest extends QuerySubRequest
 {
-    /**
-     * @Serializer\PreSerialize()
-     */
+    #[Serializer\PreSerialize]
     public function preSerialize()
     {
         if (is_string($this->query)) {

@@ -14,14 +14,14 @@ use JMS\Serializer\Annotation as Serializer;
  * Class CompositeCollection
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Composite
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class CompositeCollection
 {
     /**
      * @var array|CompositeSObject[]
-     * @Serializer\Type("array< AE\SalesforceRestSdk\Model\Rest\Composite\CompositeSObject>")
      */
+    #[Serializer\Type('array< AE\SalesforceRestSdk\Model\Rest\Composite\CompositeSObject>')]
     private $records = [];
 
     public function __construct(array $records = [])

@@ -14,56 +14,56 @@ use JMS\Serializer\Annotation as Serializer;
  * Class ChildRelationship
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Metadata
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class ChildRelationship
 {
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $cascadeDelete;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $childSObject;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $deprecatedAndHidden;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $field;
 
     /**
      * @var array|string[]
-     * @Serializer\Type("array<string>")
      */
+    #[Serializer\Type('array<string>')]
     private $junctionIdListNames = [];
 
     /**
      * @var array|string{]
-     * @Serializer\Type("array<string>")
      */
+    #[Serializer\Type('array<string>')]
     private $junctionReferenceTo = [];
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $relationshipName;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $restrictedDelete;
 
     /**

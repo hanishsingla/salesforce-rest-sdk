@@ -15,9 +15,7 @@ use JMS\Serializer\Annotation as Serializer;
 
 class DescribeGlobalSubRequest extends GetSubRequest implements DescribeGlobalSubRequestInterface
 {
-    /**
-     * @Serializer\PreSerialize()
-     */
+    #[Serializer\PreSerialize]
     public function preSerialize()
     {
         $this->url = $this->getBasePath();

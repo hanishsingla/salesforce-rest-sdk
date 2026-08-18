@@ -14,146 +14,146 @@ use JMS\Serializer\Annotation as Serializer;
  * Class Limits
  *
  * @package AE\SalesforceRestSdk\Model\Rest
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class Limits
 {
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $ConcurrentAsyncGetReportInstances;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $ConcurrentSyncReportRuns;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $DailyApiRequests;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $DailyAsyncApexExecutions;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $DailyBulkApiRequests;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $DailyDurableGenericStreamingApiEvents;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $DailyDurableStreamingApiEvents;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $DailyGenericStreamingApiEvents;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $DailyStreamingApiEvents;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $DailyWorkflowEmails;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $DataStorageMB;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $DurableStreamingApiConcurrentClients;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $FileStorageMB;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $HourlyAsyncReportRuns;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $HourlyDashboardRefreshes;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $HourlyDashboardResults;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $HourlyDashboardStatuses;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $HourlyODataCallout;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $HourlySyncReportRuns;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $HourlyTimeBasedWorkflow;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $MassEmail;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $SingleEmail;
 
     /**
      * @var Limit
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Limit")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Limit')]
     private $StreamingApiConcurrentClients;
 
     /**

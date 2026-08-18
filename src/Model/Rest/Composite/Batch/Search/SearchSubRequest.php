@@ -29,9 +29,7 @@ class SearchSubRequest extends QuerySubRequest
         return SearchResult::class;
     }
 
-    /**
-     * @Serializer\PreSerialize()
-     */
+    #[Serializer\PreSerialize]
     public function preSerialize()
     {
         $this->url = 'v'.$this->getVersion().'/search?'

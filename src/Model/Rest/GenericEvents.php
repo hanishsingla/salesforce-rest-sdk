@@ -20,8 +20,8 @@ class GenericEvents
 {
     /**
      * @var ArrayCollection|GenericEvent[]
-     * @Serializer\Type("ArrayCollection<AE\SalesforceRestSdk\Model\Rest\GenericEvent>")
      */
+    #[Serializer\Type('ArrayCollection<AE\SalesforceRestSdk\Model\Rest\GenericEvent>')]
     private $pushEvents;
 
     /**

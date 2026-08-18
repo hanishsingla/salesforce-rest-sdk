@@ -20,8 +20,8 @@ class CreateSubRequest extends PostSubRequest implements ReferenceableInterface,
 {
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectType;
 
     public function __construct(string $sObjectType, string $version = "44.0", ?string $referenceId = null)
@@ -52,9 +52,7 @@ class CreateSubRequest extends PostSubRequest implements ReferenceableInterface,
         return $this;
     }
 
-    /**
-     * @Serializer\PreSerialize()
-     */
+    #[Serializer\PreSerialize]
     public function preSerialize()
     {
         if (null === $this->sObjectType) {

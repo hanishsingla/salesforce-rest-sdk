@@ -14,218 +14,218 @@ use JMS\Serializer\Annotation as Serializer;
  * Class DescribeSObject
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Metadata
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class DescribeSObject
 {
     /**
      * @var array
-     * @Serializer\Type("array")
      */
+    #[Serializer\Type('array')]
     private $actionOverrides = [];
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $activateable;
 
     /**
      * @var array|ChildRelationship[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Metadata\ChildRelationship>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Metadata\ChildRelationship>')]
     private $childRelationships = [];
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $compactLayoutable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $createable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $custom;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $customSetting;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $deletable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $deprecatedAndHidden;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $feedEnabled;
 
     /**
      * @var array|Field[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Metadata\Field>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Metadata\Field>')]
     private $fields = [];
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $hasSubtypes;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $isSubtype;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $keyPrefix;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $label;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $labelPlural;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $layoutable;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $listviewable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $lookupLayoutable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $mergeable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $mruEnabled;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $name;
 
     /**
      * @var array
-     * @Serializer\Type("array")
      */
+    #[Serializer\Type('array')]
     private $namedLayoutInfos = [];
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $networkScopeFieldName;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $queryable;
 
     /**
      * @var array|RecordTypeInfo[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Metadata\RecordTypeInfo>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Metadata\RecordTypeInfo>')]
     private $recordTypeInfos = [];
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $replicatateable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $retrieveable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $searchLayoutable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $searchable;
 
     /**
      * @var array|SupportedScope[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Metadata\SupportedScope>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Metadata\SupportedScope>')]
     private $supportedScopes = [];
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $triggerable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $undeleteable;
 
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $updateable;
 
     /**
      * @var array|string[]
-     * @Serializer\Type("array<string,string>")
      */
+    #[Serializer\Type('array<string,string>')]
     private $urls = [];
 
     /**

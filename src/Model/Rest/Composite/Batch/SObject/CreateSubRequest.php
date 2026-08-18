@@ -20,14 +20,14 @@ use JMS\Serializer\Annotation as Serializer;
  * Class CreateSubRequest
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Composite\Batch\SObject
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class CreateSubRequest extends PostSubRequest implements CreateSubRequestInterface
 {
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectType;
 
     public function __construct(string $sObjectType, ?SObject $sObject = null, string $version = "44.0")

@@ -14,10 +14,10 @@ use JMS\Serializer\Annotation as Serializer;
  * Class JobInfo
  *
  * @package AE\SalesforceRestSdk\Bulk
- * @Serializer\XmlRoot("jobInfo")
- * @Serializer\XmlNamespace("http://www.force.com/2009/06/asyncapi/dataload")
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\XmlRoot('jobInfo')]
+#[Serializer\XmlNamespace('http://www.force.com/2009/06/asyncapi/dataload')]
+#[Serializer\ExclusionPolicy('none')]
 class JobInfo
 {
     public const STATE_OPEN      = "Open";
@@ -39,128 +39,128 @@ class JobInfo
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $id;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $operation;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $object;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $createdById;
 
     /**
      * @var \DateTimeImmutable|null
-     * @Serializer\Type("DateTimeImmutable<'Y-m-d\TH:i:s.uO'>")
      */
+    #[Serializer\Type("DateTimeImmutable<'Y-m-d\\TH:i:s.uO'>")]
     private $createdDate;
 
     /**
      * @var \DateTimeImmutable|null
-     * @Serializer\Type("DateTimeImmutable<'Y-m-d\TH:i:s.uO'>")
      */
+    #[Serializer\Type("DateTimeImmutable<'Y-m-d\\TH:i:s.uO'>")]
     private $systemModstamp;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $state;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $concurrencyMode;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $contentType;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $numberBatchesQueued;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $numberBatchesInProgress;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $numberBatchesCompleted;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $numberBatchesFailed;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $numberBatchesTotal;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $numRetries;
 
     /**
      * @var double|null
-     * @Serializer\Type("double")
      */
+    #[Serializer\Type('double')]
     private $apiVersion;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $numberRecordsFailed;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $totalProcessingTime;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $apiActiveProcessingTime;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $apexProcessingTime;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $externalIdFieldName;
 
     /**

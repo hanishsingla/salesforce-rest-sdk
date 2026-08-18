@@ -15,14 +15,14 @@ class BasicInfo
 {
     /**
      * @var DescribeSObject
-     * @Serializer\Type("AE\SalesforceRestSdk\Model\Rest\Metadata\DescribeSObject")
      */
+    #[Serializer\Type('AE\SalesforceRestSdk\Model\Rest\Metadata\DescribeSObject')]
     private $objectDescribe;
 
     /**
      * @var array|CompositeSObject[]
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Composite\CompositeSObject>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Composite\CompositeSObject>')]
     private $recentItems = [];
 
     /**

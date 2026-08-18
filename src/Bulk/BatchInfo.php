@@ -14,9 +14,9 @@ use JMS\Serializer\Annotation as Serializer;
  * Class BatchInfo
  *
  * @package AE\SalesforceRestSdk\Bulk
- * @Serializer\XmlRoot("BatchInfo")
- * @Serializer\XmlNamespace("http://www.force.com/2009/06/asyncapi/dataload")
  */
+#[Serializer\XmlRoot('BatchInfo')]
+#[Serializer\XmlNamespace('http://www.force.com/2009/06/asyncapi/dataload')]
 class BatchInfo
 {
     public const STATE_OPEN          = "Open";
@@ -26,62 +26,62 @@ class BatchInfo
     public const STATE_COMPLETED     = "Completed";
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $id;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $jobId;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $state;
 
     /**
      * @var \DateTimeImmutable|null
-     * @Serializer\Type("DateTimeImmutable<'Y-m-d\TH:i:s.uO'>")
      */
+    #[Serializer\Type("DateTimeImmutable<'Y-m-d\\TH:i:s.uO'>")]
     private $createdDate;
 
     /**
      * @var \DateTimeImmutable|null
-     * @Serializer\Type("DateTimeImmutable<'Y-m-d\TH:i:s.uO'>")
      */
+    #[Serializer\Type("DateTimeImmutable<'Y-m-d\\TH:i:s.uO'>")]
     private $systemModstamp;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $numberRecordsProcessed;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $numberRecordsFinished;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $totalProcessingTime;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $apiActiveProcessingTime;
 
     /**
      * @var int|null
-     * @Serializer\Type("int")
      */
+    #[Serializer\Type('int')]
     private $apexProcessingTime;
 
     /**

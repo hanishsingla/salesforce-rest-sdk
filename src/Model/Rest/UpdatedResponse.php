@@ -14,20 +14,20 @@ use JMS\Serializer\Annotation as Serializer;
  * Class UpdatedResponse
  *
  * @package AE\SalesforceRestSdk\Model\Rest
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class UpdatedResponse
 {
     /**
      * @var array|string[]
-     * @Serializer\Type("array<string>")
      */
+    #[Serializer\Type('array<string>')]
     private $ids = [];
 
     /**
      * @var \DateTimeImmutable
-     * @Serializer\Type("DateTimeImmutable<'Y-m-d\TH:i:s.uO', 'UTC'>")
      */
+    #[Serializer\Type("DateTimeImmutable<'Y-m-d\\TH:i:s.uO', 'UTC'>")]
     private $latestDateCovered;
 
     /**

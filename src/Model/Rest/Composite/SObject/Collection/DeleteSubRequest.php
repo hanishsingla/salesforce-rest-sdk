@@ -51,9 +51,7 @@ class DeleteSubRequest extends BaseSubRequest implements CompositeCollectionSubR
         return 'array<'.CollectionResponse::class.'>';
     }
 
-    /**
-     * @Serializer\PreSerialize()
-     */
+    #[Serializer\PreSerialize]
     public function preSerialize()
     {
         $ids = [];

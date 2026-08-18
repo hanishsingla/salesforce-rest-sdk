@@ -18,20 +18,20 @@ class ReadSubRequest extends GetSubRequest implements CompositeCollectionSubRequ
 {
     /**
      * @var string
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $sObjectType;
 
     /**
      * @var array
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $ids = [];
 
     /**
      * @var array
-     * @Serializer\Exclude()
      */
+    #[Serializer\Exclude]
     private $fields = ["Id"];
 
     public function __construct(
@@ -111,9 +111,7 @@ class ReadSubRequest extends GetSubRequest implements CompositeCollectionSubRequ
         return 'array<'.CompositeSObject::class.'>';
     }
 
-    /**
-     * @Serializer\PreSerialize()
-     */
+    #[Serializer\PreSerialize]
     public function preSerialize()
     {
         if (empty($this->ids)) {

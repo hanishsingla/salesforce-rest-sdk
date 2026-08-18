@@ -14,20 +14,20 @@ use JMS\Serializer\Annotation as Serializer;
  * Class BatchResult
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Composite\Batch
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class BatchResult
 {
     /**
      * @var bool
-     * @Serializer\Type("bool")
      */
+    #[Serializer\Type('bool')]
     private $hasErrors = false;
 
     /**
      * @var array|SubRequestResult
-     * @Serializer\Type("array<AE\SalesforceRestSdk\Model\Rest\Composite\Batch\SubRequestResult>")
      */
+    #[Serializer\Type('array<AE\SalesforceRestSdk\Model\Rest\Composite\Batch\SubRequestResult>')]
     private $results = [];
 
     /**

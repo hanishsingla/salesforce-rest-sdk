@@ -15,32 +15,32 @@ use JMS\Serializer\Annotation as JMS;
  * Class StreamingData
  *
  * @package AE\SalesforceRestSdk\Bayeux\Salesforce
- * @JMS\ExclusionPolicy("NONE")
  */
+#[JMS\ExclusionPolicy('NONE')]
 class StreamingData
 {
     /**
      * @var Event
-     * @JMS\Type("AE\SalesforceRestSdk\Bayeux\Salesforce\Event")
      */
+    #[JMS\Type('AE\SalesforceRestSdk\Bayeux\Salesforce\Event')]
     private $event;
 
     /**
      * @var SObject|null
-     * @JMS\Type("AE\SalesforceRestSdk\Model\SObject")
      */
+    #[JMS\Type('AE\SalesforceRestSdk\Model\SObject')]
     private $sobject;
 
     /**
      * @var mixed
-     * @JMS\Type("array")
      */
+    #[JMS\Type('array')]
     private $payload;
 
     /**
      * @var null|string
-     * @JMS\Type("string")
      */
+    #[JMS\Type('string')]
     private $schema;
 
     /**

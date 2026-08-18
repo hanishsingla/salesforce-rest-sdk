@@ -15,8 +15,8 @@ use JMS\Serializer\Annotation as Serializer;
  * Class SubRequest
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Composite\Batch
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 abstract class SubRequest
 {
     /**
@@ -31,27 +31,27 @@ abstract class SubRequest
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     protected $referenceId;
 
     /**
      * @var string|null
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     protected $url;
 
     /**
      * @var ArrayCollection
-     * @Serializer\Type("ArrayCollection<string, string>")
      */
+    #[Serializer\Type('ArrayCollection<string, string>')]
     protected $httpHeaders;
 
     /**
      * @var string
-     * @Serializer\Type("string")
-     * @Serializer\Exclude()
      */
+    #[Serializer\Type('string')]
+    #[Serializer\Exclude]
     private $version = "44.0";
 
     public function __construct(string $method, string $version = "44.0", ?string $referenceId = null)

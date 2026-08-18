@@ -14,20 +14,20 @@ use JMS\Serializer\Annotation as Serializer;
  * Class DeletedRecord
  *
  * @package AE\SalesforceRestSdk\Model\Rest\Composite
- * @Serializer\ExclusionPolicy("none")
  */
+#[Serializer\ExclusionPolicy('none')]
 class DeletedRecord
 {
     /**
      * @var string
-     * @Serializer\Type("string")
      */
+    #[Serializer\Type('string')]
     private $id;
 
     /**
      * @var \DateTimeImmutable
-     * @Serializer\Type("DateTimeImmutable<'Y-m-d\TH:i:s.uO', 'UTC'>")
      */
+    #[Serializer\Type("DateTimeImmutable<'Y-m-d\\TH:i:s.uO', 'UTC'>")]
     private $deletedDate;
 
     /**
