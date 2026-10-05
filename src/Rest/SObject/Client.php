@@ -147,7 +147,7 @@ class Client
      * @throws \AE\SalesforceRestSdk\AuthProvider\SessionExpiredOrInvalidException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getUpdated(string $sObjectType, \DateTime $start, \DateTime $end = null): UpdatedResponse
+    public function getUpdated(string $sObjectType, \DateTime $start, ?\DateTime $end = null): UpdatedResponse
     {
         if (null === $end) {
             $end = new \DateTime();
@@ -192,7 +192,7 @@ class Client
      * @throws \AE\SalesforceRestSdk\AuthProvider\SessionExpiredOrInvalidException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getDeleted(string $sObjectType, \DateTime $start, \DateTime $end = null): DeletedResponse
+    public function getDeleted(string $sObjectType, \DateTime $start, ?\DateTime $end = null): DeletedResponse
     {
         if (null === $end) {
             $end = new \DateTime();
